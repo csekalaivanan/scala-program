@@ -1,0 +1,26 @@
+object FindMaxMin {
+  def main(args: Array[String]): Unit = {
+    val numbers = List(8, 2, 15, 4, 10)
+
+    val (maxValue, minValue) = findMaxAndMin(numbers)
+
+    println(s"Maximum value: $maxValue")
+    println(s"Minimum value: $minValue")
+  }
+
+  def findMaxAndMin(list: List[Int]): (Int, Int) = {
+    var max = list.head
+    var min = list.head
+
+  for (num <- list.tail) {
+    if (num > max) {
+        max = num
+      }
+     if (num < min) {
+        min = num
+      }
+    }
+
+    (max, min)
+  }
+}

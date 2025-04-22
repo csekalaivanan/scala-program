@@ -1,0 +1,11 @@
+object SortArray {
+  def main(args: Array[String]): Unit = {
+    val numbers = Array(5, 2, 9, 1, 6)
+
+    val ascending = numbers.sorted
+    println("Ascending Order: " + ascending.mkString(", "))
+
+    val descending = numbers.sorted(Ordering[Int].reverse)
+    println("Descending Order: " + descending.mkString(", "))
+  }
+}

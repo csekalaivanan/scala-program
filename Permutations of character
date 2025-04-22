@@ -1,0 +1,11 @@
+object SimplePermutations {
+  def main(args: Array[String]): Unit = {
+    val chars = "abc".toList
+
+    val permutations = chars.permutations.toList
+
+    println("Permutations:")
+    permutations.foreach(p => println(p.mkString))
+  }
+}
+

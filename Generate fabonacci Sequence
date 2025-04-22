@@ -1,0 +1,22 @@
+objectFibonacciIterative {
+  def main(args: Array[String]): Unit = {
+    val n = 7
+    printFibonacci(n)
+  }
+
+  def printFibonacci(n: Int): Unit = {
+    var a = 0
+    var b = 1
+
+    if (n >= 1) print(s"$a ")
+    if (n >= 2) print(s"$b ")
+
+    for (_ <- 3 to n) {
+      val next = a + b
+      print(s"$next ")
+      a = b
+      b = next
+    }
+    println()
+  }
+}

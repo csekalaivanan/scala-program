@@ -1,0 +1,13 @@
+object SimpleCalculator {
+  def main(args: Array[String]): Unit = {
+    println("Enter your first number:")
+    val num1 = scala.io.StdIn.readDouble()
+
+    println("Enter your second number:")
+    val num2 = scala.io.StdIn.readDouble()
+
+    val sum = num1 + num2
+
+    println(s"$num1 + $num2 = $sum")
+  }
+}

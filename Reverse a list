@@ -1,0 +1,13 @@
+object ReverseList {
+  def main(args: Array[String]): Unit = {
+    val originalList = List(1, 2, 3, 4, 5)
+    val reversedList = reverseList(originalList)
+
+    println(s"Original List: $originalList")
+    println(s"Reversed List: $reversedList")
+  }
+
+  def reverseList(list: List[Int]): List[Int] = {
+    list.reverse
+  }
+}

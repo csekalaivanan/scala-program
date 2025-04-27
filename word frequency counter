@@ -1,0 +1,12 @@
+object SimpleWordCount {
+  def main(args: Array[String]): Unit = {
+    val text = "Hello , How are you"
+
+    val words = text.split(" ")
+    val counts = words.groupBy(w => w).mapValues(_.length)
+
+    for ((word, count) <- counts.toSeq.sortBy(-_._2).take(5)) {
+      println(s"$word: $count")
+    }
+  }
+}
